@@ -79,7 +79,37 @@
   .btn a:hover{
     color:rgb(7, 7, 7);
   }
-  .btncontainer{
+  .btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 20px;
+    padding: 10px;
+
+  }
+
+  .btnlg {
+    border-radius: 10px;
+    padding :10px 20px;
+    background-color: rgb(253,139,98);
+    color:black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .btnlg a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 600;
+
+  }
+
+  .design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
