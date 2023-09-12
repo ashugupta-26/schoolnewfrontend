@@ -21,10 +21,15 @@ const Home = () => {
         <div className={styles.homeimg}>
           <img src="images/ruralchild1.jpg" alt="Rural children"className={styles.img}/>
         </div>
+        
+     <div className={styles.btnContainer}>
+     <button className={styles.btn}><a href="#signin">login</a></button>
+     </div>
+      
+      
       </section>
     </div>
   );
 };
 
 export default Home;
-

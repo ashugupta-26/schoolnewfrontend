@@ -18,9 +18,68 @@
     display:flex;
     justify-content: flex-end;
     margin-top: 70px;
+    height:auto;
+    width: 100%;
 }
 .img{
     max-width: 100%;
     height:50;
     max-height:80vh;
 }
+
+.hometext h1{
+    font-size: 50px;
+    margin:15px 0 15px;
+}
+.hometext p{
+    color:black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 48px;
+}
+
+.latter form{
+    width:100%;
+    max-width: 460px;
+    position:relative;
+}
+.latter form input:first-child{
+    display:inline-block;
+    width:50%;
+    outline:none;
+    padding:16px 140px 16px 15px;
+    border:2px solid olivedrab;
+    border-radius: 30px;
+}
+
+.latter form input:last-child{
+    position:absolute;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background:rgb(253, 139, 98);
+    color:black;
+    padding:16px 40px;
+    border-radius: 32px;
+    cursor:pointer;
+    top:2px;
+    right:1px;
+}
+
+.btn {
+    border-radius: 10px;
+    padding :10px 20px;
+    background-color: rgb(253,139,98);
+    color:black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+  }
+  .btn a:hover{
+    color:rgb(7, 7, 7);
+  }
+  .btncontainer{
+    text-align: center;
+    margin-top: 20px;
+  }

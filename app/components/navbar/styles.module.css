@@ -1,52 +1,82 @@
-.header{
-  position:fixed;
-  width:100%;
-  top:0;
-  right:0;
-  z-index:9999;
-  display:flex;
-  align-items:center;
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   background: transparent;
-  padding:10px;
-  transition:all .40s ease;
-  box-shadow: 0px 1px 2px RGB(0,0,0,0.2);
+  padding: 10px;
+  transition: all 0.4s ease;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
-.logo img{
+
+.logo img {
   height: auto;
-  width:160px;
+  width: 160px;
   padding-left: 20px;
-  /* max-width: 100%; */
 }
-.navbar{
-  display:flex;
+
+.navbar {
+  display: flex;
 }
+
 .navbar li {
   list-style: none;
   padding-right: 20px;
-
+  position: relative; /* Add this to make the dropdowns work */
 }
-.navbar a{
+
+.navbar a {
   color: rgb(17, 110, 17);
   font-weight: 600;
   font-size: larger;
-  padding:10px 10px;
-  transition:all .40s ease;
+  padding: 10px 10px;
+  transition: all 0.4s ease;
   list-style: none;
   text-decoration: none;
-
-}
-.navbar a:hover{
-  color:rgb(7, 7, 7);
 }
 
-.btn {
-  border-radius: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
-  height: 30px;
-  width: 80px;
+.navbar a:hover {
+  color: rgb(7, 7, 7);
 }
-.btn a:hover{
-  color:rgb(7, 7, 7);
+
+/* Dropdown Styles */
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show dropdown when hovering over the parent li */
+.navbar li:hover .dropdownContent {
+  display: block;
+  min-width: 200px; /* Adjust as needed */
+}
+
+/* Submenu Styles */
+.submenu {
+  position: relative;
+}
+
+.submenuContent {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show submenu when hovering over the parent li */
+.submenu:hover .submenuContent {
+  display: block;
+  min-width: 200px; /* Adjust as needed */
 }
