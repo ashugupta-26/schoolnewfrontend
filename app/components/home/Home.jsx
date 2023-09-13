@@ -10,7 +10,7 @@ const Home = () => {
       <section className={styles.home} id="home">
      
         <div className={styles.hometext}>
-          <h1>WHO WE ARE? </h1>
+          <h1>Why we fuck? </h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nesciunt iure error? Fugiat beatae exercitationem dolor ipsa, repudiandae animi doloremque libero minus voluptate reprehenderit modi quos blanditiis error at! Sequi.</p>
 
           <div className={styles.design}>
