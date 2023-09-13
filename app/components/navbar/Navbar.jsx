@@ -1,30 +1,56 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from './styles.module.css';
 
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
     <header className={styles.header}>
-    {/* <nav className={styles.navbar}> */}
-    <a href="#" className={styles.logo}>
-      <img src="images/logo.png" alt="Logo"></img>
-    </a>
-    <ul className={styles.navbar}>
-      <li><a href="#Home">Home</a></li>
-      <li><a href="#catogeries">Catogories</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#Feedback">Feedback</a></li>
-      <li><a href="#Contact">Contact</a></li>
-      <li>
-      <button className={styles.btn}><a href="#signup">Sign</a></button>
-     </li>
-     <li>
-      <button className={styles.btn}><a href="#signin">login</a></button>
-      </li>
-    </ul>
-    {/* </nav> */}
-</header>
+      <Link href="/" className={styles.logo}>
+        <img src="images/logo.png" alt="Logo" />
+      </Link>
+      <nav>
+        <ul className={styles.navbar}>
+          <li><Link href="#">Home</Link></li>
+          <li className={styles.dropdown}>
+            <Link href="/Categories">Categories </Link>
+            <ul className={styles.dropdownContent}>
+            <li className={styles.submenu}>
+                <Link href="/teacher">Teacher</Link>
+                {/* <ul className={styles.submenuContent}>
+                  <li><Link href="/Uploadnotes">Study Materials</Link></li>
+                  <li><Link href="/StudentProgress">Mentor Access</Link></li>
+                  
+                </ul> */}
+              </li>
+              <li className={styles.submenu}>
+                <Link href="/student">Student</Link>
+                {/* <ul className={styles.submenuContent}>
+                  <li><Link href="/StudyMaterials">Study Materials</Link></li>
+                  <li><Link href="/MentorAccess">Mentor Access</Link></li>
+                  <li><Link href="/Loans">Loans</Link></li>
+                </ul> */}
+              </li>
+              <li className={styles.submenu}>
+                <Link href="/investor">Investor</Link>
+                {/* <ul className={styles.submenuContent}>
+                  <li><Link href="/Incentives">Incentives</Link></li>
+                  <li><Link href="/Grants">Grants</Link></li>
+                </ul> */}
+              </li>
+            </ul>
+          </li>
+          <li className={styles.navitem}>
+            <Link href="/about">
+              About
+            </Link>
+          </li>
+          <li><Link href="/feedback">Feedback</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+      {/* <button className={styles.btn}><NavLink to="#signin">Login</NavLink></button> */}
+    </header>
   );
 };
 
