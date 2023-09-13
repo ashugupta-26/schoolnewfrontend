@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from './styles.module.css';
+import { useSelector, useDispatch } from 'react-redux'
+import {
+  selectUser
+} from '../../../app/slices/userSlice'
 
 import Link from 'next/link';
 
 const Navbar = () => {
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch()
+  console.log("user ",user);
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logo}>
